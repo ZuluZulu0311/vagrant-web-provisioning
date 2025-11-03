@@ -1,12 +1,40 @@
 # Taller Vagrant + Provisionamiento con Shell
 
-## Pasos
-1. Clonar este repositorio.
-2. Ejecutar `vagrant up` para levantar las máquinas.
-3. Acceder a la máquina web en: http://192.168.56.10
-4. Verificar `index.html` y `info.php`.
+## Descripción
+Este proyecto implementa un entorno virtualizado con **Vagrant**, compuesto por dos máquinas virtuales:  
+- **Web:** Servidor Apache con PHP.  
+- **DB:** Servidor PostgreSQL con una base de datos y tabla inicial.  
 
-## Reto
-- Completar `provision-db.sh` para instalar PostgreSQL.
-- Crear una base de datos y tabla.
-- Conectar la página PHP a la base de datos y mostrar datos.
+El aprovisionamiento se realiza mediante **scripts en Bash**, que automatizan la instalación, configuración y despliegue del entorno.  
+El objetivo es comprender cómo funcionan las máquinas virtuales, la automatización de instalación de servicios y la comunicación entre ellas.
+
+## Pasos de instalación
+
+### 1. Clonar el repositorio
+Clone este repositorio en su máquina local y acceda al directorio del proyecto.
+
+### 2. Levantar las máquinas
+Ejecute el siguiente comando para crear y aprovisionar las máquinas automáticamente:
+---
+vagrant up
+---
+
+
+Esto creará dos máquinas virtuales:
+- **web** → `192.168.56.50`
+- **db** → `192.168.56.51`
+
+### 3. Acceder a la aplicación
+Una vez completado el aprovisionamiento, abra un navegador web y acceda a:
+---
+http://192.168.56.50/
+---
+
+
+Podrá visualizar los archivos `index.html` y `info.php` funcionando correctamente.
+
+---
+
+Imagen del proyecto funcionando:
+
+![alt text](image.png)
